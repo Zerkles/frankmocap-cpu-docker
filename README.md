@@ -1,4 +1,9 @@
-## Instruction:
+## How to run project:
+
+1. Download model files and put them into *base-build/smpl/* 
+2. Run one of the two available scripts
+
+## Description:
 
 There are two ways to run the project:
 
@@ -12,8 +17,7 @@ run a project.
 Alternative one downloads and installs frankmocap directly in the docker container, so it takes much longer to run this
 one.
 
-[comment]: <> (## Notes:)
-
 ## References:
+
 * https://github.com/NickVeld/frankmocap/tree/cpu-support
 * https://github.com/facebookresearch/frankmocap
