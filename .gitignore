@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 app/
-base-build/smpl
+base_build/smpl
 .idea/

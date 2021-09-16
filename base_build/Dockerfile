@@ -6,7 +6,8 @@ RUN apt install -y python3 \
     python3-pip \
     xvfb \
     freeglut3-dev \
-    wget
+    wget \
+    ffmpeg
 
 WORKDIR /opt/app/
 

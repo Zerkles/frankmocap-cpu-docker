@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Building docker image with all required components
-docker build base-build -t frankmocap-cpu-docker-base:latest
+docker build base_build -t frankmocap-cpu-docker-base:latest
 
 if [[ ! -d "app/" ]]
 then

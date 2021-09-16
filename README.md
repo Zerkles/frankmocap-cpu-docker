@@ -1,21 +1,23 @@
 ## How to run project:
 
-1. Download model files and put them into *base-build/smpl/* 
-2. Run one of the two available scripts
+1. Download model files and put them into *base_build/smpl/*
+2. Run one of the three available scripts
 
 ## Description:
 
-There are two ways to run the project:
+There are three ways to run the project:
 
-* default way - via running *run.sh* script
-* alternative way - via running *run-remote-build.sh* script
+* recommended way - via running *run_on_docker.sh*
+* alternative way - via running *run_install_on_docker.sh*
+* alternative way 2 - via running *run_local.sh*
 
-The difference between them is, that the default one clones frankmocap repository to local directory, installs whole
-project and the copies it to the docker, so there is no need to download and install all the files everytime you want to
-run a project.
+The difference between *run_on_docker.sh* and *run_install_on_docker.sh*, is that the recommended one clones frankmocap
+repository to local directory, installs whole project and the copies it to the docker, so there is no need to download
+and install all the files everytime you want to run a project. Alternative one downloads and installs frankmocap
+directly in the docker container, so it takes much longer to run this one.
 
-Alternative one downloads and installs frankmocap directly in the docker container, so it takes much longer to run this
-one.
+Script *run_local.sh* is a script for ubuntu OS, which installs all needed components and projecy and then runs it on
+the local machine.
 
 ## References:
 
