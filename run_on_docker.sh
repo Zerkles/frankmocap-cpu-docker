@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Building docker image with all required components
-docker build base_build -t frankmocap-cpu-docker-base:latest
-
 if [[ ! -d "app/" ]]
 then
     # Section below downloads and installs base frankmocap version
@@ -12,6 +9,6 @@ then
     cd ..
 fi
 
-# Building actual docker image with application
-docker build . -t frankmocap-cpu-docker:latest
-docker run -it frankmocap-cpu-docker:latest
+# Building docker image with all required components
+docker build base_build -t frankmocap-cpu-docker-base:latest
+docker run --mount type=bind,source="$(pwd)"/app,target=/opt/app -it frankmocap-cpu-docker-base:latest
