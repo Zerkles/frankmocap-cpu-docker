@@ -1,23 +1,17 @@
 ## How to run project:
 
-1. Download model files and put them into *base_build/smpl/*
-2. Run one of the three available scripts
+1. Download model files from internet and put them into *installation_image/smpl/\*files**
+2. Install application with docker by running *install_on_docker.sh*
+3. Run application container on docker by using *run_on_docker.sh*
+4. Run application in docker container terminal, for example: 
+"xvfb-run -a python3 -m demo.demo_bodymocap --input_path ./sample_data/han_short.mp4 --out_dir ./mocap_output"
 
 ## Description:
 
-There are three ways to run the project:
+Installation script pulls and installs frankmocap-cpu application in the docker container, and after that copies files
+to local */app* directory. This step is required because some users might use different OS than ubuntu.
 
-* recommended way - via running *run_on_docker.sh*
-* alternative way - via running *run_install_on_docker.sh*
-* alternative way 2 - via running *run_local.sh*
-
-The difference between *run_on_docker.sh* and *run_install_on_docker.sh*, is that the recommended one clones frankmocap
-repository to local directory, installs whole project and the copies it to the docker, so there is no need to download
-and install all the files everytime you want to run a project. Alternative one downloads and installs frankmocap
-directly in the docker container, so it takes much longer to run this one.
-
-Script *run_local.sh* is a script for ubuntu OS, which installs all needed components and projecy and then runs it on
-the local machine.
+The second script is mounting local directory with application with remote app directory for easier development.
 
 ## References:
 

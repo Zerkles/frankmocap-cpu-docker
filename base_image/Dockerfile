@@ -7,11 +7,10 @@ RUN apt install -y python3 \
     xvfb \
     freeglut3-dev \
     wget \
-    ffmpeg
+    ffmpeg \
+    git
 
 WORKDIR /opt/app/
 
 COPY requirements.txt .
-RUN pip install -r requirements.txt
-
-COPY smpl extra_data/smpl/
+RUN pip install -r requirements.txt --no-cache
