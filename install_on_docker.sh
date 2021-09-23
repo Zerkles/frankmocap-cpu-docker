@@ -1,8 +1,9 @@
 #!/bin/bash
 
+# If there is app directory, remove it (reinstallation)
 if [[ -d "./app" ]]
 then
-    rm -r app
+    sudo rm -f -r app
 fi
 
 # Building images
