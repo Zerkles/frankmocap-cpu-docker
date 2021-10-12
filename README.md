@@ -3,7 +3,9 @@
 1. Download model files from internet and put them into *installation_image/smpl/\*files**
 2. Install application with docker by running *install_on_docker.sh*
 3. Run application container on docker by using *run_on_docker.sh*
-4. Run application in docker container terminal, for example:
+4. Docker container will automatically start a server when running
+
+If you want to test frankmocap module only, you should use:
 
 ```bash
 xvfb-run -a python3 -m demo.demo_bodymocap --input_path ./sample_data/han_short.mp4 --out_dir ./mocap_output
