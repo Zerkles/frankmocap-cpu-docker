@@ -5,5 +5,5 @@ RUN mv -v /opt/app2/* /opt/app/ && rm -r /opt/app2
 
 WORKDIR /opt/app
 COPY smpl extra_data/smpl/
-COPY socket_module .
+COPY socket_module socket_module/
 RUN chmod +x scripts/install_frankmocap.sh && sh scripts/install_frankmocap.sh

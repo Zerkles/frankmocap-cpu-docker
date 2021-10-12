@@ -9,6 +9,7 @@ class SocketServer:
         self.recv_buffer_size = recv_buffer_size
 
     def start(self):
+        print(f"Server started at address {server.host} with port {server.port}!")
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             s.bind((self.host, self.port))
             s.listen()
